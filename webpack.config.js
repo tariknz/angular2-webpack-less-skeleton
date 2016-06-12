@@ -9,7 +9,9 @@ module.exports = {
     },
     module: {
         loaders: [
-            { test: /\.ts$/, loader: 'ts' }
+            { test: /\.ts$/, loader: 'ts' },
+            { test: /\.html$/, loader: 'html' },
+            { test: /\.less$/, exclude: /node_modules/, loader: 'raw!less'}
         ]
     },
     resolve: {
