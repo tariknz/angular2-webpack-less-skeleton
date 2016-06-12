@@ -1,9 +1,16 @@
 # Angular 2 with Webpack
-Angular 2 starter template with Webpack (with HTML templates, and LESS)
+Bare minimum Angular 2 starter template with Webpack (with HTML templates, and LESS). Note this doesn't include any testing libraries, this is just to get you up and going as quickly as possible.
+
+Current Angular version: 2.0.0-rc.1
 
 Includes HTML and LESS loader that will let you compile LESS and also manage importing HTML templates and stylesheets for angular components so you don't need to copy them.
 
-Current Angular version: 2.0.0-rc.1
+Note you need to use require inside the component when referencing LESS, and HTML files:
+
+    styles: [require('./app.component.less')],
+    template: require('./app.component.html')
+
+The path is relative to the component's path. Make sure you use "template" rather than "templateUrl".
 
 ## Installation
 
